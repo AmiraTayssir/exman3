@@ -1,0 +1,90 @@
+body {
+    padding-top: 70px;
+    background-color: #fff8f0;
+}
+
+.header-section {
+    background-color: #ff5722;
+    color: white;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+}
+
+.tall-section {
+    padding: 20px;
+}
+
+.box {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box.chicken {
+    background-color: #ffccbc;
+}
+
+.box.beef {
+    background-color: #ffab91;
+}
+
+.box.sushi {
+    background-color: #80deea;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.btn-primary {
+    background-color: #ff9800;
+    border-color: #ff9800;
+}
+
+.btn-primary:hover {
+    background-color: #fb8c00;
+    border-color: #fb8c00;
+}
+
+@media (min-width: 992px) {
+    .box {
+        width: 32%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        width: 48%;
+    }
+
+    .box.sushi {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .box {
+        width: 100%;
+    }
+}
+.footer {
+    background-color: #ff5722;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
