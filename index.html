@@ -2,74 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Food, LLC</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAYSSIR Food Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4a0c1e;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #76A580;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav button {
+            background: #b56e7a;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .menu {
+            margin: 20px;
+            padding: 20px;
+            background: #000000;
+            color: #fff;
+            display: none;
+        }
+        .menu.active {
+            display: block;
+        }
+        .sections {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .menu-section, .event-section {
+            background: #7d002f;
+            padding: 20px;
+            margin: 10px;
+            flex: 1;
+            text-align: center;
+        }
+        .map-section iframe {
+            width: 100%;
+            height: 300px;
+        }
+        footer {
+            background: #2c1b18;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        footer div {
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function showMenu(menuType) {
+            document.querySelectorAll('.menu').forEach(menu => menu.classList.remove('active'));
+            document.getElementById(menuType).classList.add('active');
+        }
+    </script>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Food, LLC</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <header class="header-section text-center">
-        <div class="container">
-            <h1>Welcome to Food, LLC</h1>
-            <p>Your favorite place for delicious meals!</p>
-            <a href="#" class="btn btn-primary btn-lg">View Menu</a>
-        </div>
+    <header>
+        <div class="logo">  TAYSSIR FOOD, LLC</div>
+        <div class="tagline"># NUMBER ONE PLACE FOR ALL THINGS TASTY!</div>
+        <div class="contact">999-987-5896<br><span>Call now to join us!</span></div>
+        <nav>
+            <button onclick="showMenu('chicken')">Chicken</button>
+            <button onclick="showMenu('beef')">Beef</button>
+            <button onclick="showMenu('steak')">Steak</button>
+        </nav>
     </header>
+    
+    <main>
+        <section id="chicken" class="menu active">
+            <h1>Our Menu</h1>
+            <h2>Chicken</h2>
+            <p>Chicken Lorems ipsum odor amet, consectetuer adipiscing elit. Vulputate commodo dignissim felis magnis posuere metus. Suscipit ultrices eleifend ac congue eget. Adipiscing taciti dolor molestie volutpat maximus risus dictum. Ante justo inceptos scelerisque netus hac mauris inceptos blandit ligula. Egestas a consectetur scelerisque tempor adipiscing. Cubilia nam consectetur sed class taciti ligula penatibus. Penatibus consectetur porta egestas a lacus aliquam. Et erat consequat vestibulum aliquet turpis. Ipsum sed luctus arcu risus purus iaculis Eget platea eleifend ridiculus praesent elementum aenean potenti? Hendrerit maecenas eleifend mollis accumsan felis consectetur platea ultrices. In lacinia penatibus placerat sociosqu, mollis ipsum augue? Finibus cubilia ac vitae lacus egestas rutrum; mus pulvinar sit. Ipsum venenatis suspendisse pretium egestas litora habitant nisl. Mi sodales curae iaculis ultricies nullam; urna maecenas class. Porta suspendisse fringilla tellus eros eu bibendum praesent congue. Molestie maximus enim; sed platea inceptos platea magna sed efficitur.em habitasse porttitor convallis ultrices pulvinar, arcu potenti. Sagittis sollicitudin magnis nisl curabitur volutpat quisque dapibus primis class. Volutpat lectus felis sollicitudin massa duis dictum mus. Bibendum ante sollicitudin consectetur aptent velit praesent quisque tellus nisl. Lobortis hendrerit parturient imperdiet nam velit elementum sodales ultrices elit. Nec dui augue nullam; magnis ligula tortor. Pretium enim at odio condimentum etiam, mollis senectus ipsum. Tempus neque posuere massa euismod hac consequat at. Natoque dis dictumst; augue et gravida facilisi hendrerit.Aliquam malesuada himenaeos nascetur nostra felis quis maximus nostra. Nunc donec etiam luctus sed pulvinar curae condimentum. Litora facilisis donec tempor leo senectus. Duis volutpat nullam dictum vulputate luctus magna et nulla aliquet. Semper sapien augue dignissim neque netus himenaeos porta habitant sodales. Tellus facilisis lectus consequat consequat quisque. Class facilisis turpis tellus ullamcorper ac donec. Risus tempus sit class rutrum commodo lacus. Placerat consectetur libero elementum adipiscing nibh.Odio augue porta purus dolor nisl maximus suscipit. Maecenas ligula est litora blandit elit justo aptent vitae. Curabitur parturient condimentum auctor sed diam class eros aliquet. Senectus gravida placerat maximus cras cursus. Class et aptent sodales inceptos vel mollis curabitur aliquet. Inceptos tempus penatibus vehicula nunc eleifend suspendisse donec. Eget ullamcorper pretium integer malesuada nulla suscipit varius posuere. Tincidunt primis lobortis integer imperdiet netus posuere litora curae condimentum. Potenti inceptos pellentesque tempus sapien condimentum sollicitudin velit. Vivamus nec platea accumsan netus lobortis accumsan.</p>
+        </section>
+        <section id="beef" class="menu">
+            <h1>Our Menu</h1>
+            <h2>Beef</h2>
+            <p>Beef Lorem ipsum odor amet, consectetuer adipiscing elit. Vulputate commodo dignissim felis magnis posuere metus. Suscipit ultrices eleifend ac congue eget. Adipiscing taciti dolor molestie volutpat maximus risus dictum. Ante justo inceptos scelerisque netus hac mauris inceptos blandit ligula. Egestas a consectetur scelerisque tempor adipiscing. Cubilia nam consectetur sed class taciti ligula penatibus. Penatibus consectetur porta egestas a lacus aliquam. Et erat consequat vestibulum aliquet turpis. Ipsum sed luctus arcu risus purus iaculis Eget platea eleifend ridiculus praesent elementum aenean potenti? Hendrerit maecenas eleifend mollis accumsan felis consectetur platea ultrices. In lacinia penatibus placerat sociosqu, mollis ipsum augue? Finibus cubilia ac vitae lacus egestas rutrum; mus pulvinar sit. Ipsum venenatis suspendisse pretium egestas litora habitant nisl. Mi sodales curae iaculis ultricies nullam; urna maecenas class. Porta suspendisse fringilla tellus eros eu bibendum praesent congue. Molestie maximus enim; sed platea inceptos platea magna sed efficitur.em habitasse porttitor convallis ultrices pulvinar, arcu potenti. Sagittis sollicitudin magnis nisl curabitur volutpat quisque dapibus primis class. Volutpat lectus felis sollicitudin massa duis dictum mus. Bibendum ante sollicitudin consectetur aptent velit praesent quisque tellus nisl. Lobortis hendrerit parturient imperdiet nam velit elementum sodales ultrices elit. Nec dui augue nullam; magnis ligula tortor. Pretium enim at odio condimentum etiam, mollis senectus ipsum. Tempus neque posuere massa euismod hac consequat at. Natoque dis dictumst; augue et gravida facilisi hendrerit.Aliquam malesuada himenaeos nascetur nostra felis quis maximus nostra. Nunc donec etiam luctus sed pulvinar curae condimentum. Litora facilisis donec tempor leo senectus. Duis volutpat nullam dictum vulputate luctus magna et nulla aliquet. Semper sapien augue dignissim neque netus himenaeos porta habitant sodales. Tellus facilisis lectus consequat consequat quisque. Class facilisis turpis tellus ullamcorper ac donec. Risus tempus sit class rutrum commodo lacus. Placerat consectetur libero elementum adipiscing nibh.Odio augue porta purus dolor nisl maximus suscipit. Maecenas ligula est litora blandit elit justo aptent vitae. Curabitur parturient condimentum auctor sed diam class eros aliquet. Senectus gravida placerat maximus cras cursus. Class et aptent sodales inceptos vel mollis curabitur aliquet. Inceptos tempus penatibus vehicula nunc eleifend suspendisse donec. Eget ullamcorper pretium integer malesuada nulla suscipit varius posuere. Tincidunt primis lobortis integer imperdiet netus posuere litora curae condimentum. Potenti inceptos pellentesque tempus sapien condimentum sollicitudin velit. Vivamus nec platea accumsan netus lobortis accumsan.</p>
+        </section>
+        <section id="steak" class="menu">
+            <h1>Our Menu</h1>
+            <h2>Steak</h2>
+            <p>Steak Lorem ipsum odor amet, consectetuer adipiscing elit. Vulputate commodo dignissim felis magnis posuere metus. Suscipit ultrices eleifend ac congue eget. Adipiscing taciti dolor molestie volutpat maximus risus dictum. Ante justo inceptos scelerisque netus hac mauris inceptos blandit ligula. Egestas a consectetur scelerisque tempor adipiscing. Cubilia nam consectetur sed class taciti ligula penatibus. Penatibus consectetur porta egestas a lacus aliquam. Et erat consequat vestibulum aliquet turpis. Ipsum sed luctus arcu risus purus iaculis Eget platea eleifend ridiculus praesent elementum aenean potenti? Hendrerit maecenas eleifend mollis accumsan felis consectetur platea ultrices. In lacinia penatibus placerat sociosqu, mollis ipsum augue? Finibus cubilia ac vitae lacus egestas rutrum; mus pulvinar sit. Ipsum venenatis suspendisse pretium egestas litora habitant nisl. Mi sodales curae iaculis ultricies nullam; urna maecenas class. Porta suspendisse fringilla tellus eros eu bibendum praesent congue. Molestie maximus enim; sed platea inceptos platea magna sed efficitur.em habitasse porttitor convallis ultrices pulvinar, arcu potenti. Sagittis sollicitudin magnis nisl curabitur volutpat quisque dapibus primis class. Volutpat lectus felis sollicitudin massa duis dictum mus. Bibendum ante sollicitudin consectetur aptent velit praesent quisque tellus nisl. Lobortis hendrerit parturient imperdiet nam velit elementum sodales ultrices elit. Nec dui augue nullam; magnis ligula tortor. Pretium enim at odio condimentum etiam, mollis senectus ipsum. Tempus neque posuere massa euismod hac consequat at. Natoque dis dictumst; augue et gravida facilisi hendrerit.Aliquam malesuada himenaeos nascetur nostra felis quis maximus nostra. Nunc donec etiam luctus sed pulvinar curae condimentum. Litora facilisis donec tempor leo senectus. Duis volutpat nullam dictum vulputate luctus magna et nulla aliquet. Semper sapien augue dignissim neque netus himenaeos porta habitant sodales. Tellus facilisis lectus consequat consequat quisque. Class facilisis turpis tellus ullamcorper ac donec. Risus tempus sit class rutrum commodo lacus. Placerat consectetur libero elementum adipiscing nibh.Odio augue porta purus dolor nisl maximus suscipit. Maecenas ligula est litora blandit elit justo aptent vitae. Curabitur parturient condimentum auctor sed diam class eros aliquet. Senectus gravida placerat maximus cras cursus. Class et aptent sodales inceptos vel mollis curabitur aliquet. Inceptos tempus penatibus vehicula nunc eleifend suspendisse donec. Eget ullamcorper pretium integer malesuada nulla suscipit varius posuere. Tincidunt primis lobortis integer imperdiet netus posuere litora curae condimentum. Potenti inceptos pellentesque tempus sapien condimentum sollicitudin velit. Vivamus nec platea accumsan netus lobortis accumsan.</p>
+        </section>
+        
+        <section class="sections">
+            <div class="menu-section">MENU</div>
+            <div class="event-section">EVENTS</div>
+        </section>
 
-    <div class="container-fluid tall-section">
-        <div class="row">
-            <div class="col-xs-12 col-sm-4 box chicken">
-                <h3>Chicken</h3>
-                <p>Grilled chicken served with vegetables.</p>
-            </div>
-            <div class="col-xs-12 col-sm-4 box beef">
-                <h3>Beef</h3>
-                <p>Juicy beef steak with pepper sauce.</p>
-            </div>
-            <div class="col-xs-12 col-sm-4 box sushi">
-                <h3>Sushi</h3>
-                <p>Fresh sushi rolls with wasabi.</p>
-            </div>
+        <section class="map-section">
+            <iframe src="https://maps.google.com/maps?q=Otego,%20NY&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="hours">
+            <h3>Hours:</h3>
+            <p>Mon-Fri: 9:35am - 11:00pm<br>Saturday: Closed<br>Sunday: Closed</p>
         </div>
-    </div>
-    <footer class="footer text-center">
-        <div class="container">
-            <p>&copy; 2025 Food, LLC. Tous droits réservés.</p>
-            <ul class="list-inline">
-                <li><a href="#">Politique de confidentialité</a></li>
-                <li><a href="#">Conditions d'utilisation</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-            </div>
+        <div class="address">
+            <h3>Address:</h3>
+            <p>Otego, NY 13825</p>
+        </div>
+        <div class="reviews">
+            <p>"A one of kind place to eat!" - Bigfoot</p>
+            <p>"Great service! Couldn't ask for more! I'll be back again and again!" - Mary Poppins</p>
         </div>
     </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
